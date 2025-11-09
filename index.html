@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎉 Feliz Aniversário, Camilly 💫</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg1: #03091f;
+  --bg2: #0b1a3a;
+  --neon1: #00ffe0;
+  --neon2: #ff00ff;
+  --text: #e0e0e0;
+}
+
+/* ====== Reset ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== Fundo animado ====== */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, var(--bg2), var(--bg1));
+  overflow-y: auto; /* ✅ permite rolagem vertical */
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 0; /* ✅ espaço para evitar que o conteúdo grude nas bordas */
+}
+
+/* Linhas tecnológicas */
+.lines {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(0, 255, 255, 0.05) 0px,
+    rgba(0, 255, 255, 0.05) 1px,
+    transparent 2px,
+    transparent 150px
+  ),
+  repeating-linear-gradient(
+    0deg,
+    rgba(255, 0, 255, 0.05) 0px,
+    rgba(255, 0, 255, 0.05) 1px,
+    transparent 2px,
+    transparent 150px
+  );
+  animation: moveBg 40s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveBg {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 300px 600px, -300px -600px; }
+}
+
+/* ====== Cartão ====== */
+.card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  width: 85%;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25), inset 0 0 15px rgba(255, 0, 255, 0.15);
+  backdrop-filter: blur(15px);
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== Textos ====== */
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--neon1);
+  font-size: 42px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 20px var(--neon1);
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #dcdcdc;
+}
+
+.highlight {
+  color: var(--neon2);
+  font-weight: 600;
+}
+
+.verse {
+  font-style: italic;
+  color: #8cf5ff;
+  margin-bottom: 25px;
+}
+
+/* ====== Efeito de brilho ====== */
+.glow {
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  top: -40%;
+  left: -40%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    var(--neon1),
+    var(--neon2),
+    transparent
+  );
+  border-radius: 50%;
+  filter: blur(120px);
+  animation: rotate 12s linear infinite;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ====== Botão ====== */
+.btn {
+  margin-top: 30px;
+  background: linear-gradient(90deg, var(--neon1), var(--neon2));
+  color: #0b0c10;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px var(--neon1);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--neon2);
+}
+</style>
+</head>
+
+<body>
+  <div class="lines"></div>
+  <div class="card">
+    <div class="glow"></div>
+
+    <h1>Feliz Aniversário, Camilly 💫</h1>
+
+    <p>Jesus te ama e nunca vai te abandonar!</p>
+
+    <p class="verse">“Tudo tem o seu tempo determinado, e há tempo para todo propósito debaixo do céu.” — Eclesiastes 3:1</p>
+
+    <p>Uma lembrança: a sua <span class="highlight">célula vai multiplicar muito rápido!</span>  
+    Saiba que Deus está cuidando de cada detalhe da sua vida.</p>
+
+    <p>Lembre-se: tudo faz parte do processo.  
+    Mergulhe na presença de Deus e desfrute dEle.  
+    Você é <span class="highlight">escolhida</span> e foi chamada para impactar uma geração.</p>
+
+    <p>Deus abençoe e nunca desista!</p>
+
+    <p class="highlight">Com carinho,<br>Jesus 💖</p>
+
+    <button class="btn" onclick="alert('🎉 Que este novo tempo seja extraordinário na presença de Deus!')">
+       <img src="apple-touch-icon.png" alt="">
+    </button>
+  </div>
+</body>
+</html>
